@@ -1,0 +1,50 @@
+.container{
+    color: indigo;
+    max-width: 800px;
+    background: rgba(91, 92, 90, 0.466);
+    border-radius: 2rem;
+    box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.781);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 4rem auto;
+    line-height: 3rem;
+}
+
+h1{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.buttonBox{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    transition:all 0.9s ease;
+    flex-wrap: wrap;
+}
+.buttonBox button:hover{
+    background: indigo;
+    color: white;
+}
+button:active{
+    transform:translateY(-3px)
+}
+
+h2{
+    font-size: 2rem;
+    margin:1rem 0;
+}
+
+button{
+    margin: 1rem 0;
+    padding: 10px 1rem;
+    font-size: 1rem;
+    color: indigo;
+    border: 2px solid indigo;
+    border-radius: 1rem;
+    outline: none;
+    background: rgba(76, 0, 130, 0.205);
+}

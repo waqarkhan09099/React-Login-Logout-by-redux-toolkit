@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import CounterComponent from './Components/Counter'
+import LoginForm, { Profile } from './Components/LoginForm'
+import NavBar from './Components/NavBar'
+import { useSelector } from 'react-redux'
 
 function App() {
+  const authlog = useSelector(state => state.auth.logincondition)
+  console.log(authlog)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar auth={authlog} />
+      {!authlog&&<LoginForm />}
+      {authlog && <Profile />}
+      <CounterComponent>-
+      </CounterComponent>
+    </>
+
   );
 }
 
